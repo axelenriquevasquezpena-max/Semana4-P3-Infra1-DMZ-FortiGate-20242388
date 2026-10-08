@@ -1,0 +1,15 @@
+# Reconstruccion de la configuracion final con DNS corregido.
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      dhcp4: false
+      addresses:
+        - 10.23.88.131/28
+      routes:
+        - to: default
+          via: 10.23.88.129
+      nameservers:
+        addresses:
+          - 10.23.88.129
