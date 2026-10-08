@@ -1,0 +1,7 @@
+-- Plantilla, no exportacion de credenciales. Editar localmente antes de ejecutar.
+CREATE USER 'caja_app'@'10.23.88.130' IDENTIFIED BY 'REEMPLAZAR_CLAVE_CAJA';
+CREATE USER 'inventario_app'@'10.23.88.131' IDENTIFIED BY 'REEMPLAZAR_CLAVE_INVENTARIO';
+GRANT SELECT ON laboratorio_p2.productos TO 'caja_app'@'10.23.88.130';
+GRANT UPDATE (existencias) ON laboratorio_p2.productos TO 'caja_app'@'10.23.88.130';
+GRANT SELECT, INSERT ON laboratorio_p2.ventas TO 'caja_app'@'10.23.88.130';
+GRANT SELECT, INSERT, UPDATE ON laboratorio_p2.productos TO 'inventario_app'@'10.23.88.131';

@@ -1,0 +1,9 @@
+<?php
+// Instalar fuera del document root en /etc/lab-app/database.php.
+// Usar caja_app en Caja e inventario_app en Inventario.
+return [
+    'host' => '10.23.88.132',
+    'database' => 'laboratorio_p2',
+    'user' => 'REEMPLAZAR_USUARIO',
+    'password' => 'REEMPLAZAR_CONTRASENA_LOCAL',
+];
