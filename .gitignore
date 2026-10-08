@@ -1,0 +1,12 @@
+database.php
+*.env
+.env*
+*.key
+*.pem
+*Guion*
+*guion*
+*.log
+*.zip
+__pycache__/
+.DS_Store
+Thumbs.db
