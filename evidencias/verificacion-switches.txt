@@ -1,0 +1,38 @@
+TRANSCRIPCION CONDENSADA DE RESULTADOS APORTADOS POR EL AUTOR
+
+SW-DMZ#show vlan brief
+30 DMZ active Gi0/0, Gi0/1, Gi0/2, Gi0/3
+1 default active Gi1/0-Gi3/3 (apagados en running-config)
+
+SW-DMZ#show port-security
+Secure Port  MaxSecureAddr CurrentAddr SecurityViolation Security Action
+Gi0/1        1             1           0                 Restrict
+Gi0/2        1             1           0                 Restrict
+Gi0/3        1             1           0                 Restrict
+
+SW-DMZ#copy running-config startup-config
+Compressed configuration from 4455 bytes to 2311 bytes[OK]
+Oct 8 03:40:43.226: GRUB configuration was written to disk successfully.
+
+SW-USUARIOS#show vlan brief
+10 USUARIOS       active Gi0/1
+20 ADMINISTRACION active Gi0/2
+1 default active Gi0/3, Gi1/0-Gi3/3 (apagados en running-config)
+
+SW-USUARIOS#show port-security
+Secure Port  MaxSecureAddr CurrentAddr SecurityViolation Security Action
+Gi0/1        1             1           0                 Restrict
+Gi0/2        1             1           0                 Restrict
+
+SW-USUARIOS#show interfaces trunk
+Port  Mode Encapsulation Status   Native vlan
+Gi0/0 on   802.1q         trunking 1
+Vlans allowed on trunk: 10,20
+Vlans allowed and active in management domain: 10,20
+Vlans in spanning tree forwarding state and not pruned: 10,20
+
+SW-USUARIOS#copy running-config startup-config
+Compressed configuration from 4136 bytes to 2220 bytes[OK]
+Oct 8 03:41:53.494: GRUB configuration was written to disk successfully.
+
+No es una captura automatica nueva. VLAN reservadas del fabricante omitidas.
